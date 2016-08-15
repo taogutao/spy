@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>乒乓球比赛小组抽取</title>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	height:610px;
+	background-size: 100%;
+}
+#fz{
+	margin:0 auto;
+	width:1000px;
+	background-color:#111;
+}
+#fz div{
+	margin:10px 25px;
+	text-align:center;
+	line-height:50px;
+	background-color:#333;
+	width:50px;
+	height:50px;
+	float:left;
+	border-radius:20px;
+	font-weight:bold;
+	font-size:15px;
+	color:#6CF;
+}
+.nimabi button{
+	filter:alpha(opacity=70); /*IE滤镜，透明度50%*/
+	-moz-opacity:0.7; /*Firefox私有，透明度50%*/
+	opacity:0.7;/*其他，透明度50%*/
+	width:25%;
+	height:80px;
+	margin:0px 3%;
+	color:#036;
+	font-size:30px;
+	background-color:#9CF;
+	border:1px solid #099;
+	border-radius:20px;
+}
+.nimabi{
+	width:100%;	
+}
+.nimabi button:hover{
+	border:3px solid #003;
+}
+#cj{
+	width:200px;
+	height:30px;
+	background-color:#F00;
+	text-align:center;
+	font-weight:bold;
+	line-height:30px;
+	margin:10px auto;
+	border-radius:10px;
+	border:3px solid red;
+}
+#cj:hover{
+	border:3px solid yellow;
+}
+</style>
+</head>
+
+<body>
+<div id="cj">The lucky ones！
+</div>
+<div class="nimabi">
+<button id="choujiang" onclick="chou()">START</button>
+<button id="ting" onclick="stop()">STOP</button>
+<button id="fenzu" onclick="fenzu()">GROUPS</button>
+</div>
+<div id="fz">
+</div>
+<div id="cs">
+</div>
+</body>
+<script type="text/javascript">
+
+var arr=new Array("鲁国伟","钟耀","储欣锐","简钰祥","伍启","张逸豪","陈卓豪","方国锋","王晨毅","裘科勇","符益科","徐洋","周云市","苏子瑞","覃子桐","汪双雷","温兴","朱润亮","戴施林","傅建伟","卢彰杰","舒慧杰","金心宇","王大宁","唐田华","黄凯","钱凯","金凯","范文彬","胡明波","徐坤苗","鲍加挺","陈联","金豪东","王思攀","周小伟","丁佳军","何人杰","任智滔","吴宏健","张哲","王少峰","戴楚迪","黄益提","柯子怀","庞子谦","谢国军","徐诺淦","朱晋达","尹海滨","张凡","候锦霄","庄旭伟","陆伟健","张叶新","俞扬晨","黄瑞钦","王曜","徐洋帆","张英城","周璇","陈博铭","李见光","张誉颢","金磊","潘礼泳","孙洁","占西龙","周益凯","杨强锋","陈鑫宏","管志凯","黄文彬","黄郁鑫","姜存浩","蒋姚松","李博康","施胡雄","唐元林","王乐泉","吴伉","张杰","张竣豪","赵礼云","郑金辉","周逸帆","朱平凯","朱琦琦","邱新星","岑浩伟","高佳益","夏杰军","卢嘉庆","马狄钢","张威","吴晗","徐*米","岳秋林","张佑鹏");
+var st;
+var i=0;		//防止多次加速
+var ram;
+function chou(){
+	if(i==0){
+		alert("版权所有，盗版必究！(⊙o⊙)");
+		st=window.setInterval(function(){
+			ram=parseInt(Math.random()*100)%84;
+			var id=document.getElementById("choujiang");
+			var cj=document.getElementById("cj").innerHTML=arr[ram];
+		},50);
+		}
+		i++;
+	}
+function stop(){
+	window.clearInterval(st);
+	i=0;
+}
+
+var haha="";
+var r=100;
+var arr1=new Array("鲁国伟","钟耀","储欣锐","简钰祥","伍启","张逸豪","陈卓豪","方国锋","王晨毅","裘科勇","符益科","徐洋","周云市","苏子瑞","覃子桐","汪双雷","温兴","朱润亮","戴施林","傅建伟","卢彰杰","舒慧杰","金心宇","王大宁","唐田华","黄凯","钱凯","金凯","范文彬","胡明波","徐坤苗","鲍加挺","陈联","金豪东","王思攀","周小伟","丁佳军","何人杰","任智滔","吴宏健","张哲","王少峰","戴楚迪","黄益提","柯子怀","庞子谦","谢国军","徐诺淦","朱晋达","尹海滨","张凡","候锦霄","庄旭伟","陆伟健","张叶新","俞扬晨","黄瑞钦","王曜","徐洋帆","张英城","周璇","陈博铭","李见光","张誉颢","金磊","潘礼泳","孙洁","占西龙","周益凯","杨强锋","陈鑫宏","管志凯","黄文彬","黄郁鑫","姜存浩","蒋姚松","李博康","施胡雄","唐元林","王乐泉","吴伉","张杰","张竣豪","赵礼云","郑金辉","周逸帆","朱平凯","朱琦琦","邱新星","岑浩伟","高佳益","夏杰军","卢嘉庆","马狄钢","张威","吴晗","徐*米","岳秋林","张佑鹏");
+var tt=0;
+var m;
+function fenzu(){
+	
+	tt++;
+	 if(tt%2==1){
+	m=window.setInterval(function(){
+									 
+	var list=document.getElementById("fz");
+	while(list.hasChildNodes()){
+	
+ 	list.removeChild(list.childNodes[0]);
+	r=100;
+	arr1=["鲁国伟","钟耀","储欣锐","简钰祥","伍启","张逸豪","陈卓豪","方国锋","王晨毅","裘科勇","符益科","徐洋","周云市","苏子瑞","覃子桐","汪双雷","温兴","朱润亮","戴施林","傅建伟","卢彰杰","舒慧杰","金心宇","王大宁","唐田华","黄凯","钱凯","金凯","范文彬","胡明波","徐坤苗","鲍加挺","陈联","金豪东","王思攀","周小伟","丁佳军","何人杰","任智滔","吴宏健","张哲","王少峰","戴楚迪","黄益提","柯子怀","庞子谦","谢国军","徐诺淦","朱晋达","尹海滨","张凡","候锦霄","庄旭伟","陆伟健","张叶新","俞扬晨","黄瑞钦","王曜","徐洋帆","张英城","周璇","陈博铭","李见光","张誉颢","金磊","潘礼泳","孙洁","占西龙","周益凯","杨强锋","陈鑫宏","管志凯","黄文彬","黄郁鑫","姜存浩","蒋姚松","李博康","施胡雄","唐元林","王乐泉","吴伉","张杰","张竣豪","赵礼云","郑金辉","周逸帆","朱平凯","朱琦琦","邱新星","岑浩伟","高佳益","夏杰军","卢嘉庆","马狄钢","张威","吴晗","徐*米","岳秋林","张佑鹏"];
+	}
+	while(r>0){
+	var n=document.createElement("div");
+	ram=parseInt(Math.random()*100)%r;
+	var nn=document.createTextNode(arr1[ram]);
+	n.appendChild(nn);
+	document.getElementById("fz").appendChild(n);
+	arr1.splice(ram,1);
+	r--;
+	//haha+="  "+ram+"  ";
+//	document.getElementById("cs").innerHTML=haha;
+	}
+									  
+},50);
+									  }else{window.clearInterval(m);}
+}
+
+</script>
+</html>
